@@ -6,7 +6,7 @@ import Main from "../../components/layout/Main/Main";
 
 const Products = () => {
   //  let products = useQuery();
-
+  const[] = useQuery(['products'])
   return (
     <>
       <Header></Header>
