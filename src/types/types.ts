@@ -1,4 +1,4 @@
-export interface productApi {
+export interface productApiProps {
     readonly id:Number,
     title:string,
     price:number,
