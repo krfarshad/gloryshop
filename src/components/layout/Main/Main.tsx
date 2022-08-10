@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+
 type MainProps ={
     children  : ReactNode | null
 }
