@@ -5,7 +5,7 @@ type MainProps ={
 }
 const Main = (props:MainProps) =>{
     return(
-        <div className="Main mx-auto px-2 py-2">
+        <div className="container mx-auto px-2 py-2">
             {props.children}
         </div>
     )
