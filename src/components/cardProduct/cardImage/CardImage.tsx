@@ -9,7 +9,7 @@ export const CardImage = (props:cardImageProps) => {
     const {id , src} = props;
   return (
     <div className="product-image cursor-pointer ">
-      <Link href={`product/${id}`}>
+      <Link href={`products/${id}`}>
         <a>
           <Image src={src} width={300} height={200} />
         </a>

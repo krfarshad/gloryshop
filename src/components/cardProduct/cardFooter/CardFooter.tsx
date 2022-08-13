@@ -7,7 +7,7 @@ export const CardFooter = (props:priceApp) => {
   return (
     <div className="product-footer">
       <p className=" text-green-600 text-md font-bold text-right p-4">
-        $ {price}
+        $ {price} 
       </p>
     </div>
   );

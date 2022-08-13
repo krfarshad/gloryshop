@@ -9,7 +9,7 @@ export const CardTitle = (props:cardTitleProps) => {
   return (
     <div className="product-title">
       <h2 className="font-bold text-md p-2">
-        <Link href={`product/${id}`}>
+        <Link href={`products/${id}`}>
           <a>{title}</a>
         </Link>
       </h2>

@@ -6,10 +6,9 @@ import Main from "../../components/layout/Main/Main";
 import {productApi} from "../../utils/productApi/productApi";
 import { productApiProps } from "../../types/types";
 import CardProduct from '../../components/cardProduct/CardProduct'
-type productQueryProps = {
 
-}
-const Products:NextPage = () => {
+
+ const Products:NextPage = () => {
 
   const { isError , isLoading , data} = useQuery<[productApiProps]>(['products'],productApi);
 

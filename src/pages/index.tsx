@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticPaths, NextPage } from "next";
 import Main from "../components/layout/Main/Main";
 import Head from "next/head";
 import Header from "../components/header/Header";
@@ -21,3 +21,4 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
