@@ -1,13 +1,14 @@
 export interface productApiProps {
     readonly id:Number,
     title:string,
-    price:number,
     description:string,
-    category :{
-        id:number,
-        name:string,
-        image:string
-    },
+    price:number,
+    discountPercentage :number,
+    rating: number,
+    stock: number,
+    brand:string,
+    category :string,
+    thumbnail:string,
     image:string[]
 
 }

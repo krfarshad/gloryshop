@@ -27,3 +27,6 @@ a {
     background: black;
   }
 }
+.product-image *{
+  width: 100%!important;
+}

@@ -1,22 +1,34 @@
 import { useQuery } from "@tanstack/react-query";
 import { NextPage } from "next";
+import Error from "next/error";
 import Header from "../../components/header/Header";
-import Container from "../../components/layout/Container/Container";
 import Main from "../../components/layout/Main/Main";
+import {productApi} from "../../utils/productApi/productApi";
+import { productApiProps } from "../../types/types";
+import CardProduct from '../../components/cardProduct/CardProduct'
+type productQueryProps = {
 
-const Products = () => {
-  //  let products = useQuery();
-  const[] = useQuery(['products'])
+}
+const Products:NextPage = () => {
+
+  const { isError , isLoading , data} = useQuery<[productApiProps]>(['products'],productApi);
+
   return (
     <>
       <Header></Header>
-      <Main>
-        <div className="flex flex-wrap">
-          <div className="product-box-wrapper p-2">
-            <div className="product-box">dd</div>
-          </div>
-        </div>
-      </Main>
+      {isLoading &&  <p className="text-center py-8">loading....</p>}
+      {isError   &&  <p className="text-center py-8">whoops sth is wrong</p>}
+      {data != undefined && 
+           <Main>
+             <div className="flex flex-wrap product-box-wrapper  py-5">
+               {
+                Array.from(data).map(item=>{
+                  return (<CardProduct data={item} key={item.id}/>)
+                })
+               }
+             </div>
+         </Main>
+      }
     </>
   );
 };
