@@ -9,8 +9,8 @@ import { productApiProps } from "../../../types/types";
 const SingleProduct: NextPage = (props) => {
   const queryString = useRouter();
   const id = queryString.query.productid;
-  const { isLoading, isError, data } = useQuery<productApiProps>(["products", id], productApi);
-    console.log(data)
+  const { isLoading, isError, data } = useQuery<productApiProps>( ["products", id], productApi );
+  console.log(data)
   return (
     <>
       <Header></Header>
@@ -20,6 +20,7 @@ const SingleProduct: NextPage = (props) => {
       {data != undefined && (
         <Container>
           <FlexWrapper>
+            product
             {/* product info */}
             <div className="w-1/2">{/* product */}</div>
             {/* product thumbnail */}
@@ -31,3 +32,4 @@ const SingleProduct: NextPage = (props) => {
   );
 };
 export default SingleProduct;
+
