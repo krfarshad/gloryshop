@@ -1,5 +1,5 @@
 export interface productApiProps {
-    readonly id:Number,
+    readonly id:number,
     title:string,
     description:string,
     price:number,
