@@ -1,8 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import Header from "../../components/header/Header";
+import Header from "../Header/Header";
 import Button from "@gloryshop/Button";
 import Main from "@gloryshop/Layout/Main";
+import Footer from "../Footer/Footer";
 export const Home = () => {
   return (
     <>
@@ -22,6 +23,8 @@ export const Home = () => {
           </Button>
         </Main>
       </div>
+    <Footer></Footer>
+
     </>
   );
 };

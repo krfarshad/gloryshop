@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import Header from "../../../components/header/Header";
+import Header from "../../../views/Header/Header";
 import { productApi } from "../../../utils/productApi/productApi";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";

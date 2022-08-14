@@ -1,4 +1,4 @@
-import { productApiProps } from "../../types/types";
+import { productApiProps } from "../../../types/types";
 import { CardFooter } from "./cardFooter/CardFooter";
 import { CardImage } from "./cardImage/CardImage";
 import { CardTitle } from "./cardTitle/CardTitle";

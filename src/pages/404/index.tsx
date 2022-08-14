@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import React from 'react'
-import Header from '../../components/header/Header';
+import Header from '../../views/Header/Header';
 
  const NotFound:NextPage = () => {
   return (

@@ -12,3 +12,7 @@ export interface productApiProps {
     image:string[]
 
 }
+
+export interface productProps  {
+    products: productApiProps[];
+  };
