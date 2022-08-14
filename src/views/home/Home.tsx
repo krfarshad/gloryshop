@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import Header from "../Header/Header";
+import Header from "../header/Header";
 import Button from "@gloryshop/Button";
 import Main from "@gloryshop/Layout/Main";
-import Footer from "../Footer/Footer";
+import Footer from "../footer/Footer";
 export const Home = () => {
   return (
     <>

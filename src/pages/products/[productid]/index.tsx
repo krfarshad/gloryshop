@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import Header from "../../../views/Header/Header";
+import Header from "../../../views/header/Header";
 import { productApi } from "../../../utils/productApi/productApi";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
@@ -11,13 +11,11 @@ const SingleProduct: NextPage = (props) => {
   const queryString = useRouter();
   const id = queryString.query.productid;
   const { isLoading, isError, data } = useQuery<productApiProps>( ["products", id], productApi );
-  console.log(data)
   return (
     <>
       <Header></Header>
       {isLoading && <p className="text-center py-8">loading....</p>}
       {isError && <p className="text-center py-8">whoops sth is wrong</p>}
-      {console.log(data)}
       {data != undefined && (
         <Container>
           <FlexWrapper>
