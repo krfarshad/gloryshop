@@ -1,11 +1,12 @@
 import { NextPage } from "next";
 import Header from "../../../components/header/Header";
-import FlexWrapper from "../../../components/layout/FlexWrapper/FlexWrapper";
-import Container from "../../../components/layout/Container/Container";
 import { productApi } from "../../../utils/productApi/productApi";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 import { productApiProps } from "../../../types/types";
+import Container from "@gloryshop/Layout/Container";
+import FlexWrapper from "@gloryshop/Layout/FlexWrapper";
+
 const SingleProduct: NextPage = (props) => {
   const queryString = useRouter();
   const id = queryString.query.productid;

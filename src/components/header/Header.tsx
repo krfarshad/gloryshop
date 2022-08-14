@@ -1,7 +1,7 @@
-import Container from "../layout/Container/Container";
 import React from "react";
 import Link from "next/link";
-import FlexWrapper from "../layout/FlexWrapper/FlexWrapper";
+import FlexWrapper from "@gloryshop/Button/FlexWrapper";
+import Container from "@gloryshop/Layout/Container";
 const Header:React.FC  = () => {
     return(
         <Container className="border-b-2 border-state-600 py-4">
