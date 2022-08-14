@@ -1,13 +1,7 @@
-import { NextPage } from 'next';
-import React from 'react'
-import Header from '../../views/Header/Header';
-
- const NotFound:NextPage = () => {
-  return (
-   <>
-    <Header></Header>
-    <div><p className='text-center py-8 mx-auto'> 404 - Nothing Found</p></div>
-    </>
-  )
-}
-export default NotFound;
+import { NextPage } from "next";
+import React from "react";
+import NotFound from "../../views/404/NotFound";
+const page404: NextPage = () => {
+  return <NotFound />;
+};
+export default page404;

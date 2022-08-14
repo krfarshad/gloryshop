@@ -4,10 +4,10 @@ import Header from '../header/Header';
 import { useQuery } from '@tanstack/react-query';
 import CardProduct from './cardProduct/CardProduct';
 import { productApi } from "../../utils/productApi/productApi";
-import { productProps } from '../../types/types';
+import { productsProp} from '../../types/types';
 import Footer from '../footer/Footer';
 const Products = () => {
-  const { isError, isLoading, data } = useQuery<productProps>(
+  const { isError, isLoading, data } = useQuery<productsProp>(
     ["products"],
     productApi
   );

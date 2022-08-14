@@ -1,8 +1,3 @@
-import React from "react";
-import { useQuery } from "@tanstack/react-query";
-import { productApiProps } from "../../types/types";
-import { GetStaticProps } from "next";
-
 export const productApi = async (id?:any) => {
   // let postId =  (id.queryKey[1]) ? id.queryKey[1] : " ";
   let postId = id.queryKey[1] ? id.queryKey[1] : " ";
