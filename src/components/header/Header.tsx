@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import FlexWrapper from "@gloryshop/Button/FlexWrapper";
+import FlexWrapper from "@gloryshop/Layout/FlexWrapper";
 import Container from "@gloryshop/Layout/Container";
 const Header:React.FC  = () => {
     return(
