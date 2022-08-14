@@ -5,7 +5,7 @@ const ProductThumbnail = (props: productProp) => {
   const { product } = props;
   const [featureImage , setFeatureImage] = useState<string>(product.thumbnail);
   const HandleFeatureImage = (e:any) =>{
-    console.log(e);
+    // console.log(e);
   }
   return (
     <>
