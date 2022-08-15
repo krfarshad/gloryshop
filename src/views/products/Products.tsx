@@ -14,7 +14,7 @@ const Products = () => {
   );
   return (
     <>
-      <Header></Header>
+      <Header/>
       {isLoading && <p className="text-center py-8">loading....</p>}
       {isError && <p className="text-center py-8">whoops sth is wrong</p>}
       {data != undefined && (
@@ -28,7 +28,7 @@ const Products = () => {
           </Container>
         </Main>
       )}
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };
