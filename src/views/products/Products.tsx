@@ -17,7 +17,7 @@ const Products = () => {
       <Header/>
       {isLoading && <p className="text-center py-8">loading....</p>}
       {isError && <p className="text-center py-8">whoops sth is wrong</p>}
-      {data != undefined && (
+      {data &&(
         <Main>
           <Container>
             <div className="flex flex-wrap product-box-wrapper  py-5">

@@ -17,10 +17,10 @@ export const SingleProduct = () => {
   );
   return (
     <>
-      <Header></Header>
+      <Header />
       {isLoading && <p className="text-center py-8">loading....</p>}
       {isError && <p className="text-center py-8">whoops sth is wrong</p>}
-      {data != undefined && (
+      {data && (
         <Container>
           <FlexWrapper className="items-center ">
             <ProductThumbnail product={data}  />

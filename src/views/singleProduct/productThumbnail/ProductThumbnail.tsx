@@ -22,8 +22,7 @@ const ProductThumbnail = (props: productProp) => {
           <div className="gallery flex justify-center items-center py-6 px-2 gap-2">
             {product.images.map((image) => {
               return (
-                <>
-                  <div>
+                  <div key={image}>
                     <figure >
                       <Image
                         src={image}
@@ -34,7 +33,6 @@ const ProductThumbnail = (props: productProp) => {
                       />
                     </figure>
                   </div>
-                </>
               );
             })}
           </div>
