@@ -5,13 +5,13 @@ const ProductThumbnail = (props: productProp) => {
   const { product } = props;
   const [featureImage , setFeatureImage] = useState<string>(product.thumbnail);
   const HandleFeatureImage = (e:any) =>{
-    // console.log(e);
+    setFeatureImage(e.target['data-loaded-src'])
   }
   return (
     <>
       <div className="w-full md:w-1/2 my-6">
         <div className="thumbnail">
-          <figure className="w-full text-center">
+          <figure className="w-full text-center" >
             <Image
               width={600}
               height={400}
@@ -24,13 +24,13 @@ const ProductThumbnail = (props: productProp) => {
               return (
                 <>
                   <div>
-                    <figure>
+                    <figure >
                       <Image
                         src={image}
-                        width={100}
-                        height={100}
+                        width={75}
+                        height={75}
                         className="object-cover cursor-pointer"
-                        onClick={HandleFeatureImage}
+                        onMouseEnter={HandleFeatureImage}
                       />
                     </figure>
                   </div>
