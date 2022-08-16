@@ -127,9 +127,3 @@
     filter: invert(1);
   }
 }
-.active-cart{
-  color: green;
-}
-.disable-cart{
-  color:red;
-}

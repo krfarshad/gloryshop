@@ -3,7 +3,9 @@ import Link from "next/link";
 import FlexWrapper from "@gloryshop/Layout/FlexWrapper";
 import Container from "@gloryshop/Layout/Container";
 import Cart from "./cart/Cart";
+import { useContext } from "react";
 const Header:React.FC  = () => {
+
     return(
         <Container className="border-b-2 border-state-600 ">
             {/* logo */}

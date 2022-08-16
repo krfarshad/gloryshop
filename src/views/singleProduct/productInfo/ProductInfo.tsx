@@ -3,6 +3,40 @@ import { productProp } from "../../../types/types";
 import Button from "@gloryshop/Button";
 const ProductInfo = (props: productProp) => {
     const {product} = props;
+
+
+    const HandleAddToCart = () =>{
+      // localStorage.removeIteme('cartItems');
+      const current_id = product.id;
+      const cartLists = JSON.parse(localStorage.getItem('cartItems')!);
+
+      // create globalStorage for first time
+      if(!cartLists){
+        const new_product = [{id:current_id , count:1}]
+        localStorage.setItem('cartItems' , JSON.stringify(new_product))
+        // update storage
+      }else{
+        const cartListCurrent =cartLists.findIndex((object:any)=> {
+          return object.id === current_id;
+        });
+        console.log(cartListCurrent)
+        if(cartListCurrent || cartListCurrent ==0){
+         const update_count = cartLists.map((item:any) => {
+            if(item.id === cartListCurrent ){
+              item.count + 1
+            }
+          })
+        localStorage.setItem('cartItems' , JSON.stringify(update_count))
+
+        }
+        else{
+          const new_items  = [...cartLists , {id:current_id , count: 1}];
+          localStorage.setItem('cartItems' , JSON.stringify(new_items))
+
+        }
+      }
+      console.log(cartLists)
+    }
   return (
     <>
       <div className="w-full md:w-1/2 my-8 px-2">
@@ -20,7 +54,7 @@ const ProductInfo = (props: productProp) => {
         </div>
         {/* category */}
         <div>
-            <p className="p-2 bg-green-500 text-white rounded-md my-2 inline-block">{product.category}</p>
+            <p className="p-2 border border-slate-300 text-slate-500 text-sm rounded-md my-3 inline-block">{product.category}</p>
         </div>
         {/* stock */}
         <div>
@@ -32,7 +66,7 @@ const ProductInfo = (props: productProp) => {
         </div>
         {/* add to cart */}
         <div>
-            <Button>Add to cart</Button>
+            <button className="bg-green-400 rounded-md text-white tet-lg  py-2 px-4" onClick={HandleAddToCart}>Add to cart</button>
         </div>
       </div>
     </>

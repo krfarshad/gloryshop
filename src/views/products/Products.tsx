@@ -1,7 +1,7 @@
 import React from "react";
 import Main from "@gloryshop/Layout/Main";
 import Header from "../header/Header";
-import { useQuery } from "@tanstack/react-query";
+import { QueryCache, useQuery } from "@tanstack/react-query";
 import CardProduct from "./cardProduct/CardProduct";
 import { productApi } from "../../utils/productApi/productApi";
 import { productsProp } from "../../types/types";
@@ -12,6 +12,10 @@ const Products = () => {
     ["products"],
     productApi
   );
+  // console.log(products)
+
+
+
   return (
     <>
       <Header/>
